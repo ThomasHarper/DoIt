@@ -13,6 +13,7 @@
 		A68AA0291DCA4BC200EA26B3 /* DoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A68AA0271DCA4BC200EA26B3 /* DoIt.xcdatamodeld */; };
 		A68AA02B1DCA4BC200EA26B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68AA02A1DCA4BC200EA26B3 /* Assets.xcassets */; };
 		A68AA02E1DCA4BC200EA26B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A68AA02C1DCA4BC200EA26B3 /* LaunchScreen.storyboard */; };
+		A68AA0361DCA500300EA26B3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68AA0351DCA500300EA26B3 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A68AA02A1DCA4BC200EA26B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A68AA02D1DCA4BC200EA26B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A68AA02F1DCA4BC200EA26B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A68AA0351DCA500300EA26B3 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				A68AA0201DCA4BC200EA26B3 /* AppDelegate.swift */,
 				A68AA0221DCA4BC200EA26B3 /* ViewController.swift */,
+				A68AA0351DCA500300EA26B3 /* Task.swift */,
 				A68AA0241DCA4BC200EA26B3 /* Main.storyboard */,
 				A68AA02A1DCA4BC200EA26B3 /* Assets.xcassets */,
 				A68AA02C1DCA4BC200EA26B3 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68AA0361DCA500300EA26B3 /* Task.swift in Sources */,
 				A68AA0291DCA4BC200EA26B3 /* DoIt.xcdatamodeld in Sources */,
 				A68AA0231DCA4BC200EA26B3 /* ViewController.swift in Sources */,
 				A68AA0211DCA4BC200EA26B3 /* AppDelegate.swift in Sources */,
