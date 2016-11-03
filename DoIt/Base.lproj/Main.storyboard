@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,6 +32,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Do It" id="Kw9-yl-cnC">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="M8f-nC-IGw"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m7r-Al-TLf">
                             <connections>
                                 <action selector="plusTapped:" destination="BYZ-38-t0r" id="ELV-VU-qxG"/>
@@ -46,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="EKQ-Jn-YZu">
             <objects>
-                <viewController id="rDQ-Mx-HFX" sceneMemberID="viewController">
+                <viewController id="rDQ-Mx-HFX" customClass="CreateTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vom-CP-Bgc"/>
                         <viewControllerLayoutGuide type="bottom" id="zn6-Da-HVu"/>
@@ -57,8 +59,50 @@
                     <view key="view" contentMode="scaleToFill" id="jqn-1D-wMU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xd-cg-g4g">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pqy-Ub-7WJ">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wo-Ik-q4F">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NJe-ux-jyA"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wM9-6V-2A8">
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="rDQ-Mx-HFX" eventType="touchUpInside" id="ULl-10-bzG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wM9-6V-2A8" firstAttribute="centerX" secondItem="jqn-1D-wMU" secondAttribute="centerX" id="5xw-uE-tay"/>
+                            <constraint firstItem="9wo-Ik-q4F" firstAttribute="centerX" secondItem="jqn-1D-wMU" secondAttribute="centerX" id="Kba-0Q-Q6M"/>
+                            <constraint firstItem="pqy-Ub-7WJ" firstAttribute="top" secondItem="4xd-cg-g4g" secondAttribute="bottom" constant="10" id="MEQ-NR-cQw"/>
+                            <constraint firstItem="4xd-cg-g4g" firstAttribute="centerX" secondItem="jqn-1D-wMU" secondAttribute="centerX" id="TFm-Bb-Q4x"/>
+                            <constraint firstItem="NJe-ux-jyA" firstAttribute="centerX" secondItem="jqn-1D-wMU" secondAttribute="centerX" id="UaV-YV-QVo"/>
+                            <constraint firstItem="pqy-Ub-7WJ" firstAttribute="leading" secondItem="jqn-1D-wMU" secondAttribute="leadingMargin" constant="40" id="WHq-Pi-ZEQ"/>
+                            <constraint firstItem="9wo-Ik-q4F" firstAttribute="top" secondItem="pqy-Ub-7WJ" secondAttribute="bottom" constant="30" id="WjO-gZ-UCV"/>
+                            <constraint firstItem="wM9-6V-2A8" firstAttribute="top" secondItem="NJe-ux-jyA" secondAttribute="bottom" constant="30" id="dCa-8j-4mR"/>
+                            <constraint firstItem="NJe-ux-jyA" firstAttribute="top" secondItem="9wo-Ik-q4F" secondAttribute="bottom" constant="10" id="ff8-8N-SeO"/>
+                            <constraint firstItem="pqy-Ub-7WJ" firstAttribute="centerX" secondItem="jqn-1D-wMU" secondAttribute="centerX" id="mqj-NJ-Kjc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pqy-Ub-7WJ" secondAttribute="trailing" constant="40" id="o3r-qa-iTd"/>
+                            <constraint firstItem="4xd-cg-g4g" firstAttribute="top" secondItem="vom-CP-Bgc" secondAttribute="bottom" constant="20" id="x2B-YG-btK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="NJe-ux-jyA" id="pls-j5-X2U"/>
+                        <outlet property="taskNameText" destination="pqy-Ub-7WJ" id="haM-xi-hoa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqa-Xm-o3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
