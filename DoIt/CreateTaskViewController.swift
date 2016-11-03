@@ -15,8 +15,7 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var importantSwitch: UISwitch!
     
     ///////////////// PROPERTIES ///////////////////
-    var previousViewController = TasksViewController()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,14 +23,17 @@ class CreateTaskViewController: UIViewController {
     }
 
     @IBAction func addTapped(_ sender: AnyObject) {
+        // Creating the context for CoreData
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         // Create task from the outlets data
-        let task = Task()
+        let task = Task(context: context)
         task.name = taskNameText.text!
         task.important = importantSwitch.isOn
-        // Add task to array on previous viewController
-        previousViewController.tasks.append(task)
-        // Refresh data inside the tableView of TasksViewController
-        previousViewController.tableView.reloadData()
+        
+        // Saving task
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
         // Going back to TasksViewController
         navigationController!.popViewController(animated: true)
     }
