@@ -13,6 +13,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = []
+    var selectedIndex : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +53,25 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return [taskOne, taskTwo, taskThree]
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "selectTaskSegue", sender: task)
+    }
     
     @IBAction func plusTapped(_ sender: AnyObject) {
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextViewController = segue.destination as! CreateTaskViewController
-        nextViewController.previousViewController = self
+        if segue.identifier == "addSegue" {
+            let nextViewController = segue.destination as! CreateTaskViewController
+            nextViewController.previousViewController = self
+        } else if segue.identifier == "selectTaskSegue" {
+            let nextViewController = segue.destination as! CompleteTaskViewController
+            nextViewController.task = sender as! Task
+            nextViewController.previousViewController = self
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoIt/AppDelegate.swift"
+            timestampString = "499877404.433096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoIt.AppDelegate.__deallocating_deinit"
+                  moduleName = "DoIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harper/Desktop/IOS10/DoIt/DoIt/AppDelegate.swift"
+                  timestampString = "499877404.464919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoIt.AppDelegate.init () -&gt; DoIt.AppDelegate"
+                  moduleName = "DoIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harper/Desktop/IOS10/DoIt/DoIt/AppDelegate.swift"
+                  timestampString = "499877404.468996"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoIt.AppDelegate.__allocating_init () -&gt; DoIt.AppDelegate"
+                  moduleName = "DoIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harper/Desktop/IOS10/DoIt/DoIt/AppDelegate.swift"
+                  timestampString = "499877404.471185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "DoIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harper/Desktop/IOS10/DoIt/DoIt/AppDelegate.swift"
+                  timestampString = "499877404.474407"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
